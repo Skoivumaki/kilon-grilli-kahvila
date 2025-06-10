@@ -19,6 +19,18 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  --kgk-c-divider-light1: #FF5900;
+  --kgk-c-divider-light2: #2D2D2D;
+
+  --kgk-c-primary: #FF5900;
+  --kgk-c-secondary: #2D2D2D;
+  --kgk-c-secondary-alt: #1b1b1b;
+  --kgk-c-warm-white: #F8F8FF;
+  --kgk-c-white: #FFFFFF;
+  --kgk-c-text: #262626;
+  --kgk-c-text-alt: #FFFFFF;
+  --kgk-c-text-light: #B4B4B4;
 }
 
 /* semantic color variables for this project */
@@ -30,13 +42,29 @@
   --color-border: var(--vt-c-divider-light-2);
   --color-border-hover: var(--vt-c-divider-light-1);
 
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --color-heading: var(--kgk-c-text-alt);
+  --color-heading-alt: var(--kgk-c-primary);
+  --color-text: var(--kgk-c-text);
+  --color-text-alt: var(--kgk-c-text-alt);
 
   --section-gap: 160px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Media width breakpoints */
+:root {
+  --breakpoint-xs: 480px;
+  /* Extra small devices (phones, 600px and down) */
+  --breakpoint-sm: 576px;
+  /* Small devices (tablets, 768px and up) */
+  --breakpoint-md: 768px;
+  /* Medium devices (desktops, 992px and up) */
+  --breakpoint-lg: 992px;
+  /* Large devices (large desktops, 1200px and up) */
+  --breakpoint-xl: 1200px;
+  /* Extra large devices (large desktops, 1400px and up) */
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
@@ -47,21 +75,20 @@
 
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+
+    --color-text: var(--kgk-c-text);
   }
-}
+} */
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
-  font-weight: normal;
 }
 
 body {
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
   transition:
     color 0.5s,
     background-color 0.5s;
@@ -79,7 +106,7 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
-  font-size: 15px;
+  font-size: var(--text-normal);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
