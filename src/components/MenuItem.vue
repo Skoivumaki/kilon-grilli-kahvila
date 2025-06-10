@@ -4,7 +4,7 @@ defineProps<{ id: number; name: string; price: number; ingredients: string }>();
 </script>
 
 <template>
-    <div class="flex flex-col items-center p-2 border-2 border-primary rounded-lg w-[399px] h-fit">
+    <div class="flex flex-col items-center p-2 gap-2 border-2 border-primary rounded-lg w-[399px] h-fit">
         <div class="flex justify-between items-center gap-2 w-[381px] h-[19px]">
             <div class="flex justify-center items-center text-white font-karla text-lg font-medium w-fit h-[19px]">
                 {{ id }}. {{ name }}
